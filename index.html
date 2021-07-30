@@ -1,15 +1,15 @@
-  <picture id="splash">
-    <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
-    <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x" media="(prefers-color-scheme: dark)">
-    <img class="center" src="splash/img/light-1x.png" />
-  </picture>
-  <picture id="splash">
-    <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
-    <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x" media="(prefers-color-scheme: dark)">
-    <img class="center" src="splash/img/light-1x.png" />
-  </picture>
 <!DOCTYPE html>
 <html>
+  <picture id="splash">
+    <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+    <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x" media="(prefers-color-scheme: dark)">
+    <img class="center" src="splash/img/light-1x.png" />
+  </picture>
+  <picture id="splash">
+    <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+    <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x" media="(prefers-color-scheme: dark)">
+    <img class="center" src="splash/img/light-1x.png" />
+  </picture>
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -57,11 +57,30 @@
   <link rel="stylesheet" type="text/css" href="splash/style.css">
 </head>
 <body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
   <script>
-    var serviceWorkerVersion = '2604118834';
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD_H6rjjEJ-vxVTu9URkg-dsR7TpWOBWro",
+    authDomain: "dev-folio.firebaseapp.com",
+    projectId: "dev-folio",
+    storageBucket: "dev-folio.appspot.com",
+    messagingSenderId: "1001501365006",
+    appId: "1:1001501365006:web:6b58fda01fcafdf7b17d5f",
+    measurementId: "G-2NKKCZZVHT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+  <script>
+    var serviceWorkerVersion = '1554546057';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
